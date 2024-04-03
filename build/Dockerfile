@@ -9,7 +9,7 @@ FROM mcr.microsoft.com/dotnet/sdk:$IMAGE_BASE as build
 WORKDIR /build
 
 # Copy project source files
-COPY src .
+COPY /var/lib/jenkins/workspace/DOTNET/src .
 
 # Restore, build & publish
 WORKDIR /build/src
