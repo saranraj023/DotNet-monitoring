@@ -8,6 +8,9 @@ ARG IMAGE_BASE=6.0-alpine
 FROM mcr.microsoft.com/dotnet/sdk:$IMAGE_BASE as build
 WORKDIR /build
 
+# Copy project source files
+COPY . 
+
 # Restore, build & publish
 WORKDIR /build/src
 RUN dotnet restore
